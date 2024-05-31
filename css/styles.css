@@ -77,9 +77,24 @@ padding: 24px 0 24px;
 .link {
     color: #2e2f42;
     padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.current {
+position: relative;
+color: #404BBF;
+}
 
+.current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    background-color:#404BBF;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+}
 .up-list .link:hover,
 .up-list .link:focus {
     color: #404bbf;
@@ -92,6 +107,7 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .call {
@@ -119,8 +135,13 @@ letter-spacing: 0.02em;
 }
 
 .first {
-    background-color: #2e2f42;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),url(../images/people-office\ 1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 1440px;
+    background-size: cover;
     padding: 188px 0;
+    margin: 0 auto;
 }
 
 .name-first {
@@ -147,6 +168,46 @@ padding: auto;
 }
 .item {
     flex-basis: calc((100% - 3 * 24px) / 4);
+}
+
+.item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background-color:  #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    width: 264px;
+    margin-bottom: 8px;
+}
+.icon {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    border-radius: 50%;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+    width: 100%;
+    height: 100%;
+}
+
+.team-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.team-list-icon {
+    display: flex;
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.link-icon {
+    width: 40px;
+    height: 40px;
 }
 
 .visually-hidden {
@@ -191,6 +252,7 @@ color: #434455;
     background-color: #fff;
     flex-basis: calc((100% - 72px) / 4));
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.14);
 }
 
 .mark-heading {
